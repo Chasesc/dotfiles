@@ -8,7 +8,11 @@ set nocompatible " break up with vi
 syntax enable " enable syntax highlighting
 filetype plugin on " turn on the filetype plugin
 
+set nu " show number of lines
+set rnu " relative line numbering
+set ruler " show current position in the file
 set number " show line numbers
+set showcmd " show the current command
 set ts=4 " set tabs to have 4 spaces
 set autoindent " indent when moving to the next line while writing code
 set expandtab " expand tabs into spaces
