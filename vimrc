@@ -24,3 +24,18 @@ let python_highlight_all = 1 " enable all Python syntax highlighting features
 set path+=** " search into subfolders
 set wildmenu " show matches for tab complete
 
+if !exists("g:os")
+    if has("win64") || has("win32") || has("win16")
+        let g:os = "Windows"
+    else
+        let g:os = substitute(system('uname'), '\n', '', '')
+    endif
+endif
+
+" remap the caps lock key to escape in vim.
+" in macos, this can be done via system preferences -> keyboard -> modifier
+" keys
+if g:os == "Linux"
+    au VimEnter * silent! !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
+    au VimLeave * silent! !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Caps_Lock'
+endif
