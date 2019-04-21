@@ -8,6 +8,7 @@ set nocompatible " break up with vi
 syntax enable " enable syntax highlighting
 filetype plugin on " turn on the filetype plugin
 
+set complete+=kspell " show spell checking suggestions only if spell check is enabled
 set nu " show number of lines
 set rnu " relative line numbering
 set ruler " show current position in the file
