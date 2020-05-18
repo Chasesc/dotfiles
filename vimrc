@@ -1,13 +1,9 @@
-nnoremap <Left> :echoe "Use h"<CR>
-nnoremap <Right> :echoe "Use l"<CR>
-nnoremap <Up> :echoe "Use k"<CR>
-nnoremap <Down> :echoe "Use j"<CR>
-
 set nocompatible " break up with vi
 
 syntax enable " enable syntax highlighting
 filetype plugin on " turn on the filetype plugin
 
+set rtp+=/usr/local/opt/fzf
 set complete+=kspell " show spell checking suggestions only if spell check is enabled
 set nu " show number of lines
 set rnu " relative line numbering
